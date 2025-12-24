@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Buon Natale~🎄</title>
+
+  <style>
+    body {
+      background: radial-gradient(circle at top, #fff1f5, #fdecef);
+      font-family: "Segoe UI", sans-serif;
+      text-align: center;
+      padding: 40px;
+      color: #5a2a2a;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-weight: 500;
+      color: #a4133c;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 320px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      margin-bottom: 25px;
+      cursor: pointer;
+    }
+
+    .message {
+      font-size: 18px;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    audio {
+      margin-top: 25px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    /* Snow */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      user-select: none;
+      pointer-events: none;
+      animation: fall linear infinite;
+      opacity: 0.8;
+      z-index: 9999;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Merry Christmas!😘🎄</h1>
+  <div class="subtitle">A little something, just for you</div>
+<div style="font-size:16px; color:#a4133c; margin-bottom:10px; opacity:0.85;">
+  Click the photo 💌
+</div>
+
+  <img src="photo.jpg" alt="A special memory" onclick="revealMessage()">
+
+  <p id="secret" style="
+    display:none;
+    margin-top:20px;
+    font-size:18px;
+    opacity:0;
+    transition: opacity 1.5s;
+  ">
+    I’ve been wanting to tell you this — you make everything feel softer 🤍 
+    I wish for a day like this, that someday, I could spent christmas with you, in our lovely house! Oh, what a great dream it is! 
+  </p>
+
+  <div class="message">
+    <p>
+      Maligayang pasko sa'yo, bebangg! hehe medyo cheesy to pero omki lang, ikaw na yan ih!.
+      Nakapagpasko rin sa wakas! Pero ang pinagpapasalamat ko talaga ay yung masaya naman kahit papaano ang pasko, kasama ang pamilya at kausap ang mga kaibigan.,,, masaya ako dahil kahit maraming nagbago sa pagsapit ng pasko, nandito parin tayo at ginugunita ito, nang may konting gahan at galak sa ating kalooban!
+      Sana ang kasiyahan sa pasko ngayon ay magtuloy-tuloy na hanggang sa pagsapit ng bagong taon at sa mga darating pang mga araw. Doon palang ay sobrang thankful na ako ih!
+    </p>
+
+    <p>
+      Siguro ito na yung pinaka message ko para sayo,,, Sana maenjoy mo ang christmas season kahit bukas na ang main event hihihi! Palagi akong naghihintay sa mga kwento at rants mo, at sana ngayong pasko, maraming masasayang moments and kulitan ang makwento mo sa akin! Na para bang naexperience ko na rin kung gaano kasaya ang pasko jan sainyo!
+      Huwag kang magalala, ako rin ay magkkwento tungkol sa ganaps ko sa bukas hihi! kaya let's enjoy such moments while it lasts hihi and make the most out of it na rin! Sana talaga maging magical sya for us, and sana magrasps natin ulit kung gaano kasaya salubungin ang pasko kasama ang mga mahal natin sa buhay!
+      Ang wish ko lang ngayong pasko, sana'y maging masaya tayo ng lubos, at maidala natin ang sayang 'yon hanggang sa mga susunod pang pasko!
+    </p>
+
+    <p>
+      Again, I wish you a very jolly hotdog, este christmas mwehehe! I wish you and your family a good health and prosperity, and hope that happiness always find its way into your life! 😘 Merry christmas, my dear! Don't forget to always smile and be happy. Keep warm and full of love!
+    - From me, to you (◍•ᴗ•◍)♡ ✧*。    
+    </p>
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="footer">
+    Made with warmth🫂
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Snow
+    const snowflakes = 30;
+
+    for (let i = 0; i < snowflakes; i++) {
+      const snow = document.createElement("div");
+      snow.className = "snowflake";
+      snow.textContent = "❄";
+      snow.style.left = Math.random() * 100 + "vw";
+      snow.style.animationDuration = 5 + Math.random() * 10 + "s";
+      snow.style.fontSize = 10 + Math.random() * 20 + "px";
+      document.body.appendChild(snow);
+    }
+
+    // Reveal message
+    function revealMessage() {
+      const msg = document.getElementById("secret");
+      msg.style.display = "block";
+      setTimeout(() => {
+        msg.style.opacity = 1;
+      }, 50);
+    }
+  </script>
+
+</body>
+</html>
+
